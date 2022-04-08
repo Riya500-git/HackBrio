@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HackBrio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+</head>
+<body>
+  <section class="showcase">
+    <header>
+      <h2 class="logo">Agrivolve</h2>
+      <div class="toggle"></div>
+    </header>
+    <video src="images/video.mp4" muted loop autoplay></video>
+    <div class="overlay"></div>
+    <div class="text">
+      <div class="container">
+       <div class="screen">
+          <div class="screen__content">
+           <form class="login">
+             <div class="login__field">
+              <i class="login__icon fas fa-user"></i>
+              <input type="number" class="login__input" placeholder="Aadhar Number">
+             <button class="button login__submit">
+              <span class="button__text">Log In Now >>> </span>
+                <button id="myButton" class="float-left submit-button">
+                  <script type="text/javascript">
+                    document.getElementById("myButton").onclick = function () {
+                    location.href = "http://127.0.0.1:5500/sidebar.html";};
+                  </script>   
+                 <i class="button__icon fas fa-chevron-right"></i>
+                </div>
+                </button>		
+             </button>		
+           </form>
+        </div>
+        <div class="screen__background">
+          <span class="screen__background__shape screen__background__shape4"></span>
+          <span class="screen__background__shape screen__background__shape3"></span>		
+          <span class="screen__background__shape screen__background__shape2"></span>
+          <span class="screen__background__shape screen__background__shape1"></span>
+        </div>		
+      </div>
+    </div>
+    </div>
+  </section>
+</body>
+</html>
