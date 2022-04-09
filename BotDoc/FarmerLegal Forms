@@ -1,0 +1,57 @@
+#Http Request made to create a container
+curl --request POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: JWT <your_jwt_token>' --data {
+    "page_type": "p2",
+    "display_chat": true,
+    "requester": "331200"
+} 'https://api.botdoc.io/v1/module_container/container/'
+#HttpRequest made to create a Recipient
+curl --request POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: JWT <your_jwt_token>' --data {
+    "first_name": "Utsav",
+    "last_name": "Paul"
+} 'https://api.botdoc.io/v1/module_container/container/1535843/recipient/'
+#HttpRequest made to create Recipient Methods
+curl --request POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: JWT <your_jwt_token>' --data {
+    "interface_class": "email",
+    "value": "utsav.paul99@gmail.com"
+} 'https://api.botdoc.io/v1/module_container/recipient/1624037/recipient_item/'
+#HttpRequest made to define the a Email message
+curl --request POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: JWT <your_jwt_token>' --data {
+    "subject": "Farmer Details Uploading Needed",
+    "body": "Dear Farmer, Kindly upload your Legal documents and Land related scanned documents for the Governtment Autorities to verify and process your request and solve your issues.\nThank You!"
+}'https://api.botdoc.io/v1/module_container/container/1535843/email/'
+curl --request POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: JWT <your_jwt_token>' --data {
+    "title": "Land Owner Document",
+    "description": "Please upload the necessary land ownership document so that we can authorize your appeal.",
+    "allowed_extensions": [
+        "docx",
+        "pdf"
+    ],
+    "max_files": 2,
+    "file_size_limit": 25000000,
+    "container": 1535843
+}'https://api.botdoc.io/v1/module_container_pull/pull/'
+curl --request POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: JWT <your_jwt_token>' --data {
+    "title": "ADHAAR CARD UPLOAD",
+    "description": "Sir we require your Adhaar Card details to ensure you are a registered user with our Government Database.",
+    "allowed_extensions": [
+        "jpg",
+        "docx",
+        "pdf"
+    ],
+    "max_files": 1,
+    "file_size_limit": 5000000,
+    "container": 1535843
+}'https://api.botdoc.io/v1/module_container_pull/pull/'
+curl --request POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: JWT <your_jwt_token>' --data {
+    "title": "LEASE & FINANCIAL DOCUMENT ",
+    "description": "Please enter the Financial documents related to the land lease and farming business for Govt. Authorities to cross verify!",
+    "allowed_extensions": [
+        "pdf",
+        "docx"
+    ],
+    "max_files": 5,
+    "file_size_limit": 90000000,
+    "container": 1535843
+}'https://api.botdoc.io/v1/module_container_pull/pull/'
+#HttpRequest made to send the container to the receivers
+curl --request GET --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: JWT <your_jwt_token>' 'https://api.botdoc.io/v1/module_container/container/1535843/send_notification/'
