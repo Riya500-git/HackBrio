@@ -81,7 +81,7 @@ header .logo
   left: 0;
   width: 100%;
   height: 100%;
-  background: #03a9f4;
+  background: #03a8f45a;;
   mix-blend-mode: overlay;
 }
 .text
@@ -140,7 +140,7 @@ header .logo
 }
 
 body {
-	background: linear-gradient(90deg, #C7C5F4, #175fa2);		
+	background: linear-gradient(90deg, #C7C5F4, #175fa26f);		
 }
 
 .container {
@@ -150,11 +150,11 @@ body {
 }
 
 .screen {		
-	background: linear-gradient(90deg, #35d220, #0b723b);		
+	background: linear-gradient(90deg, #35d22076, #0b723b);		
 	position: relative;	
 	height: 600px;
 	width: 360px;	
-	box-shadow: 0px 0px 24px #087bc2;
+	box-shadow: 0px 0px 24px #087bc26a;
 }
 
 .screen__content {
@@ -182,7 +182,7 @@ body {
 .screen__background__shape1 {
 	height: 520px;
 	width: 520px;
-	background: #FFF;	
+	background: white;
 	top: -50px;
 	right: 120px;	
 	border-radius: 0 72px 0 0;
@@ -191,7 +191,7 @@ body {
 .screen__background__shape2 {
 	height: 220px;
 	width: 220px;
-	background: #0d9fac;	
+	background: #0d9fac72;	
 	top: -172px;
 	right: 0;	
 	border-radius: 32px;
@@ -200,7 +200,7 @@ body {
 .screen__background__shape3 {
 	height: 540px;
 	width: 190px;
-	background: linear-gradient(270deg, #432fd8, #0992c8);
+	background: linear-gradient(270deg, #432fd86c, #0992c845);
 	top: -24px;
 	right: 0;	
 	border-radius: 32px;
@@ -209,7 +209,7 @@ body {
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: #7E7BB9;	
+	background: #7e7bb963;	
 	top: 420px;
 	right: 50px;	
 	border-radius: 60px;
@@ -229,7 +229,7 @@ body {
 .login__icon {
 	position: absolute;
 	top: 30px;
-	color: #7875B5;
+	color: #7875b56c;
 }
 
 .login__input {
@@ -247,7 +247,7 @@ body {
 .login__input:focus,
 .login__input:hover {
 	outline: none;
-	border-bottom-color: #4cb8ed;
+	border-bottom-color: #4cb7ed86;
 }
 
 .login__submit {
@@ -262,8 +262,8 @@ body {
 	display: flex;
 	align-items: center;
 	width: 100%;
-	color: #35bbc7;
-	box-shadow: 0px 2px 2px #0e49ae;
+	color: #35bbc774;
+	box-shadow: 0px 2px 2px #0e49ae6c;
 	cursor: pointer;
 	transition: .2s;
 }
@@ -271,7 +271,7 @@ body {
 .login__submit:active,
 .login__submit:focus,
 .login__submit:hover {
-	border-color: #251db9;
+	border-color: #251db972;
 	outline: none;
 }
 
@@ -280,3 +280,84 @@ body {
 	margin-left: auto;
 	color: #22719e;
 }
+
+
+
+
+
+
+
+
+.bubbles img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+  font: 'Futura';
+}
+
+.bubbles{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: -100px;
+  font: 'Futura';
+}
+
+@keyframes bubble{
+  0%{
+    transform: translateY(0);
+    opacity: 0;
+    font: 'Futura';
+  }
+    
+    50%{
+    opacity: 1;
+      font: 'Futura';
+  }
+    70%{
+    opacity: 1;
+      font: 'Futura';
+  }
+    100%{
+    transform: translateY(-80vh);
+    opacity: 0;
+      font: 'Futura';
+  }
+}
+
+.bubbles img:nth-child(1){
+  animation-delay: 2s;
+  width: 25px;
+  font: 'Futura';
+}
+.bubbles img:nth-child(2){
+  animation-delay: 1s;
+  font: 'Futura';
+}
+.bubbles img:nth-child(3){
+  animation-delay: 3s;
+  width: 25px;
+  font: 'Futura';
+}
+.bubbles img:nth-child(4){
+  animation-delay: 4.5s;
+  font: 'Futura';
+}
+.bubbles img:nth-child(5){
+  animation-delay: 3s;
+  font: 'Futura';
+}
+.bubbles img:nth-child(6){
+  animation-delay: 6s;
+  width: 20px;
+  font: 'Futura';
+}
+.bubbles img:nth-child(7){
+  animation-delay: 7s;
+  width: 35px;
+  font: 'Futura';
+
+
+
+
